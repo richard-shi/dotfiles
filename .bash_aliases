@@ -6,8 +6,10 @@
 # Activate common aliases (CHECK IF BSD COMMANDS ARE THE SAME AS GNU)
 common_aliases(){
     alias v='vim'
-    alias bim = 'vim'
-    alias grep = 'grep --color=auto'
+    alias bim='vim'
+    alias grep='grep --color=auto'
+    alias ..='cd ..'
+    alias ...='cd ../..'
 
     # May be installed on both, but must check
     alias t='tmux'
@@ -16,7 +18,7 @@ common_aliases(){
 
 # Aliases for Work
 linux_aliases(){
-
+    alias ll='ls -l -sort'
 }
 
 # Aliases for Home
