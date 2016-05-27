@@ -1,5 +1,9 @@
-# dotfiles
-Home Directory Configuration Dotfiles
+Richard's Dotfiles
+==================
+Here are my configuration files currently for:
+* Bash
+* Vim
 
-# NOTE
-.bash_secrets is not tracked for privacy purposes
+Installation
+============
+Clone the repo in your Home directory
