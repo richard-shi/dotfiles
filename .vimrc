@@ -1,91 +1,106 @@
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Maintainer: 
+"       Amir Salihefendic
+"       http://amix.dk - amix@amix.dk
+"
+" Version: 
+"       5.0 - 29/05/12 15:43:36
+"
+" Blog_post: 
+"       http://amix.dk/blog/post/19691#The-ultimate-Vim-configuration-on-Github
+"
+" Awesome_version:
+"       Get this config, nice color schemes and lots of plugins!
+"
+"       Install the awesome version from:
+"
+"           https://github.com/amix/vimrc
+"
+" Syntax_highlighted:
+"       http://amix.dk/vim/vimrc.html
+"
+" Raw_version: 
+"       http://amix.dk/vim/vimrc.txt
+"
+" Sections:
+"    -> Plugins
+"    -> General
+"    -> VIM user interface
+"    -> Colors and Fonts
+"    -> Files and backups
+"    -> Text, tab and indent related
+"    -> Visual mode related
+"    -> Moving around, tabs and buffers
+"    -> Status line
+"    -> Editing mappings
+"    -> vimgrep searching and cope displaying
+"    -> Spell checking
+"    -> Misc
+"    -> Helper functions
+"
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Plugins
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set nocompatible              " be iMproved, required
+filetype off                  " required
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+" alternatively, pass a path where Vundle should install plugins
+" call vundle#begin('~/some/path/here')
+
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+
+" INSERT PLUGINS HERE
+
+
+" EXAMPLES:
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" The following are examples of different formats supported.
+" Keep Plugin commands between vundle#begin/end.
+" plugin on GitHub repo
+" Plugin 'tpope/vim-fugitive'
+" plugin from http://vim-scripts.org/vim/scripts.html
+" Plugin 'L9'
+" Git plugin not hosted on GitHub
+" Plugin 'git://git.wincent.com/command-t.git'
+" git repos on your local machine (i.e. when working on your own plugin)
+" Plugin 'file:///home/gmarik/path/to/plugin'
+" The sparkup vim script is in a subdirectory of this repo called vim.
+" Pass the path to set the runtimepath properly.
+" Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
+" Avoid a name conflict with L9
+" Plugin 'user/L9', {'name': 'newL9'}
+
+" All plugins must be added before this line
+call vundle#end()            " required
+filetype plugin indent on    " required
+
+" To ignore plugin indent changes, instead use:
+"filetype plugin on
+
+" Brief help
+" :PluginList       - lists configured plugins
+" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
+" :PluginSearch foo - searches for foo; append `!` to refresh local cache
+" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
+
+" see :h vundle for more details or wiki for FAQ
+" Put your non-Plugin stuff after this line
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => General
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Sets how many lines of history VIM has to remember
+set history=700
 
 " Enable filetype plugins
-filetype plugin on
-
-" Install vim-plug/Plugged if not already installed
-if empty(glob('~/.vim/autoload/plug.vim'))
-  silent !curl --unsecure -fLo ~/.vim/autoload/plug.vim --create-dirs
-    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-  autocmd VimEnter * PlugInstall | source $MYVIMRC
-endif
-
-call plug#begin('~/.vim/plugged')
-
-" Nerdtree
-Plug 'scrooloose/nerdtree'
-
-" Nerdtree tabs
-Plug 'jistr/vim-nerdtree-tabs'
-
-" CCTree
-Plug 'hari-rangarajan/CCTree'
-
-" YouCompleteMe
-Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clang-completer' }
-
-" Syntastic
-" Plug 'scrooloose/syntastic'
-
-" vim-airline
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-
-" vim-colors-solarized
-Plug 'altercation/vim-colors-solarized'
-
-" vim-trailing-whitespace
-Plug 'bronson/vim-trailing-whitespace'
-
-" vim-opengrok
-" Requires ctags and opengrok installed 
-Plug 'asenac/vim-opengrok'
-
-" Add plugins to &runtimepath
-call plug#end()
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Plugin-Specific Settings and mappings
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Syntastic
-"set statusline+=%#warningmsg#
-"set statusline+=%{SyntasticStatuslineFlag()}
-"set statusline+=%*
-
-"let g:syntastic_always_populate_loc_list = 1
-"let g:syntastic_auto_loc_list = 1
-"let g:syntastic_check_on_open = 1
-"let g:syntastic_check_on_wq = 0
-
-" Nerdtree tabs
-nnoremap <leader>t :NERDTreeTabsToggle<CR>
-
-" YouCompleteME
-let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
-let g:ycm_show_diagnostics_ui = 1 
-let g:ycm_enable_diagnostic_highlighting = 1
-
-
-" vim-airline
-set ttimeoutlen=50
-set t_Co=256
-
-let g:airline_theme = 'badwolf'
-let g:airline#extensions#hunks#enabled=0
-let g:airline#extensions#branch#enabled=1
-
-" vim-colors-solarized
-" let g:solarized_termcolors=256
-" set background=dark
-" colorscheme solarized
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => General
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" sets how many lines of history VIM has to remember
-set history=700
+" filetype plugin on "Enabled above in 'plugins'
+" filetype indent on "Enabled above in 'plugins'
 
 " Set to auto read when a file is changed from the outside
 set autoread
@@ -101,159 +116,121 @@ nmap <leader>w :w!<cr>
 " Turns off auto-commenting
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => VIM user interface
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Incremental Search
-set incsearch
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Set 7 lines to the cursor - when moving vertically using j/k
+set so=7
 
-" Highlight search results
-set hlsearch
+" Turn on the WiLd menu
+set wildmenu
 
-" C-Style indenting
-set cindent
+" Ignore compiled files
+set wildignore=*.o,*~,*.pyc
 
-" Line numbers
-set number
+"Always show current position
+set ruler
 
-" Allows show current position
-" set ruler
+" Height of the command bar
+set cmdheight=2
 
-" Show last command
-set showcmd
+" A buffer becomes hidden when it is abandoned
+set hid
 
-" Highlight current line
-set cursorline
+" Configure backspace so it acts as it should act
+set backspace=eol,start,indent
+set whichwrap+=<,>,h,l
 
 " Ignore case when searching
 set ignorecase
 
-" Try to guess cases when searching
+" When searching try to be smart about cases 
 set smartcase
 
-" Don't redraw when executing macros
+" Highlight search results
+set hlsearch
+
+" Makes search act like search in modern browsers
+set incsearch
+
+" Don't redraw while executing macros (good performance config)
 set lazyredraw
 
-" Better Regular Expressions
+" For regular expressions turn magic on
 set magic
 
-" Show matching brackets
+" Show matching brackets when text indicator is over them
 set showmatch
+" How many tenths of a second to blink when matching brackets
+set mat=2
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Colors and Fonts
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Syntax Highlighting
-" set syntax
-syntax enable 
-
-" Background color
-" set background=dark
+" No annoying sound on errors
+set noerrorbells
+set novisualbell
+set t_vb=
+set tm=500
 
 " Color 80th Column
-" if (exists('+colorcolumn'))
-set colorcolumn=80
-highlight ColorColumn ctermbg=9
-"endif
+if (exists('+colorcolumn'))
+    set colorcolumn=80
+    highlight ColorColumn ctermbg=9
+endif
 
-" Color everything beyond 80th column red
-" highlight OverLength ctermbg=red ctermfg=white guibg=#592929
-" match OverLength /\%81v.\+/
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Colors and Fonts
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Enable syntax highlighting
+syntax enable
 
-" set UTF-8 as standard encoding
+set background=dark
+" colorscheme solarized " For low contrast during day
+colorscheme desert
+
+" Set extra options when running in GUI mode
+if has("gui_running")
+    set guioptions-=T
+    set guioptions+=e
+    set t_Co=256
+    set guitablabel=%M\ %t
+endif
+
+" Set utf8 as standard encoding and en_US as the standard language
 set encoding=utf8
 
-" Use Unix filetypes
+" Use Unix as the standard file type
 set ffs=unix,dos,mac
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Backups
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Files, backups and undo
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Turn backup off, since most stuff is in SVN, git et.c anyway...
+set nobackup
+set nowb
 set noswapfile
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Text, tab and indents
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Text, tab and indent related
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Use spaces instead of tabs
 set expandtab
 
-" Smart tabs
+" Be smart when using tabs ;)
 set smarttab
-
-" Filetype indentation
-filetype indent on
 
 " 1 tab == 4 spaces
 set shiftwidth=4
-set softtabstop=4
 set tabstop=4
 
 " Linebreak on 500 characters
 set lbr
 set tw=500
 
-""""""""""""""""""""""""""""""
-" => Visual mode related
-""""""""""""""""""""""""""""""
-" Visual mode pressing * or # searches for the current selection
-" Super useful! From an idea by Michael Naumann
-vnoremap <silent> * :call VisualSelection('f')<CR>
-vnoremap <silent> # :call VisualSelection('b')<CR>
+set ai "Auto indent
+set si "Smart indent
+set wrap "Wrap lines
 
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Moving around, tabs, windows and buffers
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Treat long lines as break lines (useful when moving around in them)
-map j gj
-map k gk
-
-" Map <Space> to / (search) and Ctrl-<Space> to ? (backwards search)
-map <space> /
-map <c-space> ?
-
-" Disable highlight when <leader><cr> is pressed
-map <silent> <leader><cr> :noh<cr>
-
-" Smart way to move between windows
-map <C-j> <C-W>j
-map <C-k> <C-W>k
-map <C-h> <C-W>h
-map <C-l> <C-W>l
-
-" Close the current buffer
-map <leader>bd :Bclose<cr>
-
-" Close all the buffers
-map <leader>ba :1,1000 bd!<cr>
-
-" Useful mappings for managing tabs
-map <leader>tn :tabnew<cr>
-map <leader>to :tabonly<cr>
-map <leader>tc :tabclose<cr>
-map <leader>tm :tabmove
-
-" Opens a new tab with the current buffer's path
-" Super useful when editing files in the same directory
-map <leader>te :tabedit <c-r>=expand("%:p:h")<cr>/
-
-" Switch CWD to the directory of the open buffer
-map <leader>cd :cd %:p:h<cr>:pwd<cr>
-
-" Specify the behavior when switching between buffers
-try
-  set switchbuf=useopen,usetab,newtab
-  set stal=2
-catch
-endtry
-
-" Return to last edit position when opening files (You want this!)
-autocmd BufReadPost *
-     \ if line("'\"") > 0 && line("'\"") <= line("$") |
-     \   exe "normal! g`\"" |
-     \ endif
-" Remember info about open buffers on close
-set viminfo^=%
 
 """"""""""""""""""""""""""""""
 " => Visual mode related
@@ -303,7 +280,7 @@ map <leader>te :tabedit <c-r>=expand("%:p:h")<cr>/
 " Switch CWD to the directory of the open buffer
 map <leader>cd :cd %:p:h<cr>:pwd<cr>
 
-" Specify the behavior when switching between buffers
+" Specify the behavior when switching between buffers 
 try
   set switchbuf=useopen,usetab,newtab
   set stal=2
@@ -326,8 +303,7 @@ set viminfo^=%
 set laststatus=2
 
 " Format the status line
-" Turned off due to vim-airline
-"set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l
+set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -416,8 +392,7 @@ map <leader>q :e ~/buffer<cr>
 " Toggle paste mode on and off
 map <leader>pp :setlocal paste!<cr>
 
-" Turn off Auto-commenting
-autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Helper functions
@@ -478,28 +453,4 @@ function! <SID>BufcloseCloseIt()
      execute("bdelete! ".l:currentBufNum)
    endif
 endfunction
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Fix Copy Paste Indentation
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-function! WrapForTmux(s)
-  if !exists('$TMUX')
-    return a:s
-  endif
-
-  let tmux_start = "\<Esc>Ptmux;"
-  let tmux_end = "\<Esc>\\"
-
-  return tmux_start . substitute(a:s, "\<Esc>", "\<Esc>\<Esc>", 'g') . tmux_end
-endfunction
-
-let &t_SI .= WrapForTmux("\<Esc>[?2004h")
-let &t_EI .= WrapForTmux("\<Esc>[?2004l")
-
-function! XTermPasteBegin()
-  set pastetoggle=<Esc>[201~
-  set paste
-  return ""
-endfunction
-
-inoremap <special> <expr> <Esc>[200~ XTermPasteBegin()
+filetype plugin on
