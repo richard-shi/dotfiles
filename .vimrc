@@ -123,7 +123,7 @@ set number
 set showcmd
 
 " Highlight current line
-set cursorline
+" set cursorline
 
 " Ignore case when searching
 set ignorecase
