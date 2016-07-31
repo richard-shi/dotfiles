@@ -139,9 +139,8 @@ if [ "$(uname)" == "Darwin" ]; then
     # Setting pkg-config configuation path
     export PKG_CONFIG_PATH="/usr/local/lib/pkgconfig:/usr/local/lib"
 
-    source .bash_secrets
+    # 
 fi
 
-# Setting Github API token for Homebrew                                     
-export HOMEBREW_GITHUB_API_TOKEN="f025815f319ac91651e794f5e6a045be56e442d4" 
+source ${HOME}/.bash_secrets
 
