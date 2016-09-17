@@ -24,24 +24,24 @@ Plug 'jistr/vim-nerdtree-tabs'
 Plug 'hari-rangarajan/CCTree'
 
 " YouCompleteMe
-" Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clang-completer' }
+"Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clang-completer' }
 
 " Syntastic
 " Plug 'scrooloose/syntastic'
 
 " vim-airline
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+" Plug 'vim-airline/vim-airline'
+" Plug 'vim-airline/vim-airline-themes'
 
 " vim-colors-solarized
-Plug 'altercation/vim-colors-solarized'
+" Plug 'altercation/vim-colors-solarized'
 
 " vim-trailing-whitespace
 Plug 'bronson/vim-trailing-whitespace'
 
 " vim-opengrok
 " Requires ctags and opengrok installed 
-Plug 'asenac/vim-opengrok'
+" Plug 'asenac/vim-opengrok'
 
 " Add plugins to &runtimepath
 call plug#end()
@@ -63,9 +63,9 @@ call plug#end()
 nnoremap <leader>t :NERDTreeTabsToggle<CR>
 
 " YouCompleteME
-" let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
-" let g:ycm_show_diagnostics_ui = 1 
-" let g:ycm_enable_diagnostic_highlighting = 1
+let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
+let g:ycm_show_diagnostics_ui = 1 
+let g:ycm_enable_diagnostic_highlighting = 1
 
 
 " vim-airline

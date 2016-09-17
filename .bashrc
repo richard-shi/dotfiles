@@ -2,6 +2,11 @@
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
+# set PATH so it includes user's private bin if it exists
+if [ -d "$HOME/bin" ] ; then
+    PATH="$HOME/bin:$PATH"
+fi
+
 # If not running interactively, don't do anything
 case $- in
     *i*) ;;
@@ -75,27 +80,6 @@ xterm*|rxvt*)
     ;;
 esac
 
-# enable color support of ls and also add handy aliases
-if [ -x /usr/bin/dircolors ]; then
-    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
-    alias ls='ls --color=auto'
-    #alias dir='dir --color=auto'
-    #alias vdir='vdir --color=auto'
-
-    alias grep='grep --color=auto'
-    alias fgrep='fgrep --color=auto'
-    alias egrep='egrep --color=auto'
-fi
-
-# some more ls aliases
-alias ll='ls -alF'
-alias la='ls -A'
-alias l='ls -CF'
-
-# Add an "alert" alias for long running commands.  Use like so:
-#   sleep 10; alert
-alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
-
 # Alias definitions.
 # You may want to put all your additions into a separate file like
 # ~/.bash_aliases, instead of adding them here directly.
@@ -128,19 +112,21 @@ if [ "$(uname)" == "Darwin" ]; then
 
     # Setting PATH for Python 3.5
     # The orginal version is saved in .bash_profile.pysave
-    PATH="${PATH}:/Library/Frameworks/Python.framework/Versions/3.5/bin"
-    export PATH
+    #PATH="${PATH}:/Library/Frameworks/Python.framework/Versions/3.5/bin"
+    #export PATH
 
     # Setting PATH for Python 2.7
     # The orginal version is saved in .bash_profile.pysave
-    PATH="${PATH}:/Library/Frameworks/Python.framework/Versions/2.7/bin"
-    export PATH
+    #PATH="${PATH}:/Library/Frameworks/Python.framework/Versions/2.7/bin"
+    #export PATH
 
     # Setting pkg-config configuation path
     export PKG_CONFIG_PATH="/usr/local/lib/pkgconfig:/usr/local/lib"
-
-    # 
 fi
 
-source ${HOME}/.bash_secrets
+# Add secret keys if it exists
+if [ -d "${HOME}/.bash_secrets" ]; then
+    source ${HOME}/.bash_secrets
+fi
+
 
