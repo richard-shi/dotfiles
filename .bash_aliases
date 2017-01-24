@@ -14,7 +14,7 @@ alias l='ls -CF'
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
-alias ls='ls -G'
+alias ls='ls -lahG'
 alias gprof='instruments'
 alias grep='grep --color=auto'
 alias gdb='lldb'
@@ -22,6 +22,7 @@ alias emacs='emacs-24.5 -nw'
 alias editnotes='vim ~/bin/notes'
 alias mplay='mplayer -novideo'
 alias maclogout="osascript -e 'tell application \"System Events\" to log out'"
+alias t='tmux'
 
 # Detect OS and call corresponding alias functions
 #main(){

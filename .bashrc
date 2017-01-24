@@ -7,6 +7,11 @@ if [ -d "$HOME/bin" ] ; then
     PATH="$HOME/bin:$PATH"
 fi
 
+# Add /opt/local/bin to PATH
+if [ -d "/opt/local/bin" ] ; then
+    PATH="/opt/local/bin:$PATH"
+fi
+
 # If not running interactively, don't do anything
 case $- in
     *i*) ;;

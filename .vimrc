@@ -24,7 +24,10 @@ Plug 'jistr/vim-nerdtree-tabs'
 Plug 'hari-rangarajan/CCTree'
 
 " YouCompleteMe
-"Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clang-completer' }
+Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clang-completer' }
+
+" YCM-Generator
+Plug 'rdnetto/YCM-Generator', { 'branch': 'stable'}
 
 " Syntastic
 " Plug 'scrooloose/syntastic'
@@ -66,6 +69,8 @@ nnoremap <leader>t :NERDTreeTabsToggle<CR>
 let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
 let g:ycm_show_diagnostics_ui = 1 
 let g:ycm_enable_diagnostic_highlighting = 1
+let g:ycm_python_binary_path = '/usr/bin/python3'
+let g:ycm_autoclose_preview_window_after_completion = 1
 
 
 " vim-airline
