@@ -23,18 +23,3 @@ alias editnotes='vim ~/bin/notes'
 alias mplay='mplayer -novideo'
 alias maclogout="osascript -e 'tell application \"System Events\" to log out'"
 alias t='tmux'
-
-# Detect OS and call corresponding alias functions
-#main(){
-#    common_aliases
-#    case "$OSTYPE" in
-#        darwin*) osx_aliases ;;
-#        linux*) linux_aliases ;;
-#        *) echo "Error: unknown OS $OSTYPE";;
-#    esac
-#}
-#
-#main
-
-
-
