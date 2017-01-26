@@ -18,7 +18,6 @@ alias ls='ls -lahG'
 alias gprof='instruments'
 alias grep='grep --color=auto'
 alias gdb='lldb'
-alias emacs='emacs-24.5 -nw'
 alias editnotes='vim ~/bin/notes'
 alias mplay='mplayer -novideo'
 alias maclogout="osascript -e 'tell application \"System Events\" to log out'"
