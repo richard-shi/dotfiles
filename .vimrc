@@ -46,6 +46,13 @@ Plug 'bronson/vim-trailing-whitespace'
 " Requires ctags and opengrok installed 
 " Plug 'asenac/vim-opengrok'
 
+" vim-clojure-static
+Plug 'guns/vim-clojure-static'
+
+" fireplace
+Plug 'tpope/vim-fireplace'
+
+
 " Add plugins to &runtimepath
 call plug#end()
 

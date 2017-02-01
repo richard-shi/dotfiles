@@ -25,7 +25,7 @@ alias t='tmux'
 
 
 
-alias emacs-mac='/usr/local/opt/emacs-mac/Emacs.app/Contents/MacOS/Emacs'
+alias emacs-mac='/Applications/Emacs.app/Contents/MacOS/Emacs'
 alias ed='emacs --daemon'
 alias et='emacsclient -t'
 alias ec='/usr/local/opt/emacs-mac/Emacs.app/Contents/MacOS/Emacs'

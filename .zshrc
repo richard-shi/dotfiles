@@ -1,5 +1,6 @@
 # If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin:/usr/local/bin:$PATH
+# NOTE: Moved this section to .profile
+# export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH=/Users/richardshi/.oh-my-zsh
@@ -57,7 +58,7 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
- export MANPATH="/usr/local/man:/usr/share/man:$MANPATH"
+# export MANPATH="/usr/local/man:/usr/share/man:$MANPATH"
 
 # You may need to manually set your language environment
  export LANG=en_US.UTF-8
