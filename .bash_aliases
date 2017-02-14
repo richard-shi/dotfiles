@@ -1,4 +1,4 @@
-# Bash aliases for Richard Shi
+# Bash aliases
 alias v='vim'
 alias bim='vim'
 alias grep='grep --color=auto'
@@ -23,9 +23,9 @@ alias mplay='mplayer -novideo'
 alias maclogout="osascript -e 'tell application \"System Events\" to log out'"
 alias t='tmux'
 
-
-
 alias emacs-mac='/Applications/Emacs.app/Contents/MacOS/Emacs'
 alias ed='emacs --daemon'
 alias et='emacsclient -t'
 alias ec='/usr/local/opt/emacs-mac/Emacs.app/Contents/MacOS/Emacs'
+
+alias love="/Applications/love.app/Contents/MacOS/love"
