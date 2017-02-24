@@ -10,6 +10,9 @@ if [ -x /usr/libexec/path_helper ]; then
     source /etc/profile
 fi
 
+# We want 256 color
+# export TERM=xterm-256color
+
 # Setting default editor(for use with Ctrl-X e)
 export EDITOR="/usr/bin/vim"
 
