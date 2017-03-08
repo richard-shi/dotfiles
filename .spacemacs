@@ -46,9 +46,8 @@ values."
      (ruby :variables
            ruby-enable-ruby-on-rails-support t)
      ruby-on-rails
-     ;; lua
-     ;; javascript
-     python
+     (python :variables
+             python-test-runner 'pytest)
      (shell :variables
              shell-default-height 30
              shell-default-position 'bottom)
@@ -318,7 +317,13 @@ Can be installed with `brew install trash', or `brew install osxutils`''."
    explicitly specified that a variable should be set before a package is loaded,
    you should place your code here."
 
-  (turn-on-fci-mode)
+  ;; Activate column indicator in prog-mode and text-mode, except for org-mode
+  (add-hook 'prog-mode-hook 'turn-on-fci-mode)
+  (add-hook 'text-mode-hook 'turn-on-fci-mode)
+  (add-hook 'org-mode-hook 'turn-off-fci-mode 'append)
+
+  ;; Turn on company-mode autocompletion
+  (global-company-mode)
   )
 
 ;; Do not write anything past this comment. This is where Emacs will

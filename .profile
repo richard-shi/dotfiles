@@ -56,6 +56,7 @@ export USE_CCACHE=1
 # Try setting pyenv
 eval "$(pyenv init -)" || echo "pyenv failed"
 
+export PYTHONSTARTUP=$HOME/.pythonrc
 
 # OS X only
 ################################################################################
