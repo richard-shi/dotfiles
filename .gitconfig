@@ -3,14 +3,15 @@
 	email = richardshi97@gmail.com
 [alias]
 	co = checkout
-    gud = "!echo scrub"
-    l = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%ad) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative --exclude=origin/build_* --remotes --branches
-    ll = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%ad) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative --branches --tags --remotes
-    lb = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%ad) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
-    co = checkout
-    st = status
-    up = remote update -p
-    ff = merge --ff-only
+	gud = "!echo scrub"
+	l = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%ad) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative --exclude=origin/build_* --remotes --branches
+	ll = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%ad) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative --branches --tags --remotes
+	lb = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%ad) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+	co = checkout
+	st = status
+	up = remote update -p
+	ff = merge --ff-only
+	start = '!git init && git commit --allow-empty -m "Initial commit"'
 [core]
 	autocrlf = input
 [push]
