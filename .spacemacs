@@ -31,8 +31,9 @@ values."
    ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
    '(
+     (javascript :variables javascript-disable-tern-port-files nil)
      yaml
-     swift
+     ;; swift
      elixir
      html
      helm
@@ -325,6 +326,13 @@ Can be installed with `brew install trash', or `brew install osxutils`''."
 
   ;; Turn on company-mode autocompletion
   (global-company-mode)
+
+  ;; js-mode indentation
+  (setq-default js2-basic-offset 4)
+  (setq-default js-indent-level 4)
+
+  ;; js2-mode: Helps define module 
+  (setq js2-include-node-externs t)
   )
 
 ;; Do not write anything past this comment. This is where Emacs will

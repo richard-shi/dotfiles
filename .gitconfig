@@ -11,10 +11,13 @@
 	st = status
 	up = remote update -p
 	ff = merge --ff-only
-	start = '!git init && git commit --allow-empty -m "Initial commit"'
 [core]
 	autocrlf = input
 [push]
 	default = current
 [rerere]
 	enabled = true
+[stash]
+	showPatch = true
+[rebase]
+	autostash = true

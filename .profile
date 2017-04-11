@@ -54,9 +54,12 @@ fi
 export USE_CCACHE=1
 
 # Try setting pyenv
-eval "$(pyenv init -)" || echo "pyenv failed"
+# eval "$(pyenv init -)" || echo "pyenv failed"
 
 export PYTHONSTARTUP=$HOME/.pythonrc
+
+# Setup Yarn
+# export PATH="$PATH:`yarn global bin`"
 
 # OS X only
 ################################################################################
