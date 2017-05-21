@@ -50,7 +50,7 @@ COMPLETION_WAITING_DOTS="true"
 
 # Tmux plugin startup variables:
 # Automatically start a tmux session upon logging in. Set to false by default.
-ZSH_TMUX_AUTOSTART="true"
+ZSH_TMUX_AUTOSTART="false"
 
 # Only attempt to autostart tmux once. If this is disabled when the previous
 # option is enabled, then tmux will be autostarted every time you source your
@@ -59,7 +59,7 @@ ZSH_TMUX_AUTOSTART_ONCE="true"
 
 # When running tmux automatically connect to the currently running tmux session
 # if it exits, otherwise start a new session. Set to true by default.
-ZSH_TMUX_AUTOCONNECT="true"
+ZSH_TMUX_AUTOCONNECT="false"
 
 # Close the terminal session when tmux exits. Set to the value of
 # ZSH_TMUX_AUTOSTART by default.
