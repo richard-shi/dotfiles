@@ -55,7 +55,7 @@ ZSH_TMUX_AUTOSTART="false"
 # Only attempt to autostart tmux once. If this is disabled when the previous
 # option is enabled, then tmux will be autostarted every time you source your
 # zsh config files. Set to true by default.
-ZSH_TMUX_AUTOSTART_ONCE="true"
+ZSH_TMUX_AUTOSTART_ONCE="false"
 
 # When running tmux automatically connect to the currently running tmux session
 # if it exits, otherwise start a new session. Set to true by default.
@@ -78,7 +78,7 @@ ZSH_TMUX_AUTOQUIT="false"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(tmux git colored-man colorize pip python brew osx zsh-syntax-highlighting)
+plugins=(tmux git colored-man colorize pip python elixir mix brew osx zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 

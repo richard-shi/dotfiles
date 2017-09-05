@@ -28,3 +28,4 @@ alias et='emacsclient -t'
 alias ec='/usr/local/opt/emacs-mac/Emacs.app/Contents/MacOS/Emacs'
 
 alias love="/Applications/love.app/Contents/MacOS/love"
+alias scheme="rlwrap -r -c -f /Users/richardshi/Development/scheme_workspace/mit_scheme_bindings.txt scheme"
