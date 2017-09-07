@@ -8,4 +8,6 @@ Here are my configuration files currently for:
 
 Installation
 ============
-Clone the repo in your Home directory
+
+Clone repo into the $HOME directory, then navigate into the dotfiles/ directory. 
+Run the ./create_links.sh script to create symbolic links to all dot files in the parent directory  
