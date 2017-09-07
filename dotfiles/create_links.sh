@@ -5,7 +5,11 @@ GLOBIGNORE=".:.."
 
 shopt -s dotglob
 for f in $DIR/[.]*; do
+
+    # echo "Removing extra file: ../${f##*/}"
+    # rm "../${f##*/}"
+
     echo "Creating symbolic link ../${f##*/}"
-    ln -s "$f" "../${f##*/}"
+    ln -sf "$f" "../${f##*/}"
 done
 
