@@ -31,6 +31,11 @@ if [ -d "/opt/local/bin" ] ; then
     PATH="/opt/local/bin:$PATH"
 fi
 
+# ~/.local/bin to PATH
+if [ -d "$HOME/.local/bin" ] ; then
+    PATH="$HOME/.local/bin:$PATH"
+fi
+
 # SHELL SETUP
 ################################################################################
 
@@ -68,3 +73,21 @@ export PYTHONSTARTUP=$HOME/.pythonrc
 export PKG_CONFIG_PATH="/usr/local/lib/pkgconfig:/usr/local/lib"
 
 
+# Rust Cargo
+export PATH="$HOME/.cargo/bin:$PATH"
+
+# Emscripten
+# source ./emsdk_env.sh
+#if [ -e "${HOME}/emsdk_env.sh" ]; then
+#    source ${HOME}/Development/cpp_workspace/emsdk/emsdk_env.sh
+#fi
+
+
+
+
+
+
+
+
+
+export PATH="$HOME/.cargo/bin:$PATH"
