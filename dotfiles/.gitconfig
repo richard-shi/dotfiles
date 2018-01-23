@@ -1,6 +1,6 @@
 [user]
 	name = Richard Shi
-	email = richardshi97@gmail.com
+	email = mail@richardshi.com
 [alias]
 	co = checkout
 	gud = "!echo scrub"
@@ -21,3 +21,5 @@
 	showPatch = true
 [rebase]
 	autostash = true
+[color]
+	ui = true
