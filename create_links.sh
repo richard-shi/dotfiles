@@ -6,10 +6,13 @@ GLOBIGNORE=".:.."
 shopt -s dotglob
 for f in $DIR/[.]*; do
 
-    # echo "Removing extra file: ../${f##*/}"
-    # rm "../${f##*/}"
+    if [[ "$f" == */.git ]]; then
+        echo "Ignoring .git folder..."
+        continue;
+    fi
 
-    echo "Creating symbolic link ../${f##*/}"
-    ln -sf "$f" "../${f##*/}"
+    echo "Creating symbolic link $HOME/${f##*/}"
+    # echo "ln -sf $f $HOME/${f##*/}"
+    ln -sf "$f" "$HOME/${f##*/}"
 done
 
