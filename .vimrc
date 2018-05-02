@@ -1,99 +1,4 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Plugins
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-" Enable filetype plugins
-filetype plugin on
-
-" Install vim-plug/Plugged if not already installed
-if empty(glob('~/.vim/autoload/plug.vim'))
-  silent !curl --unsecure -fLo ~/.vim/autoload/plug.vim --create-dirs
-    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-  autocmd VimEnter * PlugInstall | source $MYVIMRC
-endif
-
-call plug#begin('~/.vim/plugged')
-
-" Nerdtree
-Plug 'scrooloose/nerdtree'
-
-" Nerdtree tabs
-Plug 'jistr/vim-nerdtree-tabs'
-
-" CCTree
-Plug 'hari-rangarajan/CCTree'
-
-" YouCompleteMe
-" Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clang-completer' }
-
-" YCM-Generator
-" Plug 'rdnetto/YCM-Generator', { 'branch': 'stable'}
-
-" Syntastic
-" Plug 'scrooloose/syntastic'
-
-" vim-airline
-" Plug 'vim-airline/vim-airline'
-" Plug 'vim-airline/vim-airline-themes'
-
-" vim-colors-solarized
-" Plug 'altercation/vim-colors-solarized'
-
-" vim-trailing-whitespace
-Plug 'bronson/vim-trailing-whitespace'
-
-" vim-opengrok
-" Requires ctags and opengrok installed 
-" Plug 'asenac/vim-opengrok'
-
-" vim-clojure-static
-Plug 'guns/vim-clojure-static'
-
-" fireplace
-Plug 'tpope/vim-fireplace'
-
-
-" Add plugins to &runtimepath
-call plug#end()
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Plugin-Specific Settings and mappings
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Syntastic
-"set statusline+=%#warningmsg#
-"set statusline+=%{SyntasticStatuslineFlag()}
-"set statusline+=%*
-
-"let g:syntastic_always_populate_loc_list = 1
-"let g:syntastic_auto_loc_list = 1
-"let g:syntastic_check_on_open = 1
-"let g:syntastic_check_on_wq = 0
-
-" Nerdtree tabs
-nnoremap <leader>t :NERDTreeTabsToggle<CR>
-
-" YouCompleteME
-"let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
-"let g:ycm_show_diagnostics_ui = 1 
-"let g:ycm_enable_diagnostic_highlighting = 1
-"let g:ycm_python_binary_path = '/usr/bin/python3'
-"let g:ycm_autoclose_preview_window_after_completion = 1
-
-
-" vim-airline
-set ttimeoutlen=50
-set t_Co=256
-
-let g:airline_theme = 'badwolf'
-let g:airline#extensions#hunks#enabled=0
-let g:airline#extensions#branch#enabled=1
-
-" vim-colors-solarized
-" let g:solarized_termcolors=256
-" set background=dark
-" colorscheme solarized
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " sets how many lines of history VIM has to remember
@@ -157,7 +62,7 @@ set showmatch
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Syntax Highlighting
 " set syntax
-syntax enable 
+syntax enable
 
 " Background color
 " set background=dark

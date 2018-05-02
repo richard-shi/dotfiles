@@ -1,0 +1,4 @@
+# Home computer specific settings
+
+echo "Home computer"
+export PATH="$HOME/.cargo/bin:$PATH" # Rust setup

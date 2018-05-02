@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 
-DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-GLOBIGNORE=".:.."
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"     # Go Home
+GLOBIGNORE=".:.."                                           # Ignore . & ..
 
-shopt -s dotglob
+shopt -s dotglob                                            # See hidden files
 for f in $DIR/[.]*; do
 
     if [[ "$f" == */.git ]]; then
@@ -12,7 +12,6 @@ for f in $DIR/[.]*; do
     fi
 
     echo "Creating symbolic link $HOME/${f##*/}"
-    # echo "ln -sf $f $HOME/${f##*/}"
     ln -sf "$f" "$HOME/${f##*/}"
 done
 
