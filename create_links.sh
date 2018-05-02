@@ -6,8 +6,8 @@ GLOBIGNORE=".:.."                                           # Ignore . & ..
 shopt -s dotglob                                            # See hidden files
 for f in $DIR/[.]*; do
 
-    if [[ "$f" == */.git ]]; then
-        echo "Ignoring .git folder..."
+    if [[ "$f" == */.git ]] || [[ "$f" == */.gitignore ]]; then
+        echo "Ignoring git files..."
         continue;
     fi
 
