@@ -23,3 +23,5 @@
 	autostash = true
 [color]
 	ui = true
+[fetch]
+    prune = true
